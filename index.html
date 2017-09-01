@@ -5,83 +5,91 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="js/index.js"></script>
 </head>
-<body><table><tr><td style="width:900px;">
-	<div><br>
-		<p id="display"> </p>
-	</div></td></tr><tr><td>
-	<div id="keyboard">
-	  <div style="clear:both">
-	    <div class="key" onclick="split('`')">~<br />`</div>&nbsp;
-			<div class="key" onclick="split('1')">!<br />1</div>&nbsp;
-	    <div class="key" onclick="split('2')">@<br />2</div>&nbsp;
-	    <div class="key" onclick="split('3')">#<br />3</div>&nbsp;
-	    <div class="key" onclick="split('4')">$<br />4</div>&nbsp;
-	    <div class="key" onclick="split('5')">%<br />5</div>&nbsp;
-	    <div class="key" onclick="split('6')">^<br />6</div>&nbsp;
-	    <div class="key" onclick="split('7')">&amp;<br />7</div>&nbsp;
-	    <div class="key" onclick="split('8')">*<br />8</div>&nbsp;
-	    <div class="key" onclick="split('9')">(<br />9</div>&nbsp;
-	    <div class="key" onclick="split('0')">)<br />0</div>&nbsp;
-	    <div class="key" onclick="split('-')">_<br />-</div>&nbsp;
-	    <div class="key" onclick="split('=')">+<br />=</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)" style="width:100px;">Backspace</div>
-	  </div>
-	  <div style="clear:both">
-	    <div class="key" onclick="myFunction(this.innerHTML)" style="width:75px;">Tab</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">Q</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">W</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">E</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">R</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">T</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">Y</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">U</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">I</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">O</div>&nbsp;
-	    <div class="key" onclick="myFunction(this.innerHTML)">P</div>&nbsp;
-	    <div class="key" onclick="split('[')">{<br />[</div>&nbsp;
-	    <div class="key" onclick="split(']')">}<br />]</div>&nbsp;
-	    <div class="key" onclick="split('\\')" style="width:75px;">|<br />\</div>
-	  </div>
-	  <div style="clear:both">
-    	<div id="caps" class="key" onclick="myFunction(this.innerHTML)" style="width:92px;">Caps Lock</div>&nbsp;
-			<div class="key" onclick="myFunction(this.innerHTML)">A</div>&nbsp;
-		 	<div class="key" onclick="myFunction(this.innerHTML)">S</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">D</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">F</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">G</div>&nbsp;
-			<div class="key" onclick="myFunction(this.innerHTML)">H</div>&nbsp;
-			<div class="key" onclick="myFunction(this.innerHTML)">J</div>&nbsp;
-			<div class="key" onclick="myFunction(this.innerHTML)">K</div>&nbsp;
-			<div class="key" onclick="myFunction(this.innerHTML)">L</div>&nbsp;
-			<div class="key" onclick="split(';')">:<br />;</div>&nbsp;
-			<div class="key" onclick='split("&#39;")'>&#34;<br />&#39;</div>&nbsp;
-			<div class="key" onclick="myFunction(this.innerHTML)" style="width:110px;">Enter</div>
-		</div>
-		<div style="clear:both">
-		  <div id="shfl" class="key" onclick="myFunction(this.innerHTML)" style="width:120px;">Shift</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">Z</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">X</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">C</div>&nbsp;
-		 	<div class="key" onclick="myFunction(this.innerHTML)">V</div>&nbsp;
-		  <div class="key" onclick="myFunction(this.innerHTML)">B</div>&nbsp;
-	   	<div class="key" onclick="myFunction(this.innerHTML)">N</div>&nbsp;
-		 	<div class="key" onclick="myFunction(this.innerHTML)">M</div>&nbsp;
-	    <div class="key" onclick="split(',')"><<br />,</div>&nbsp;
-	    <div class="key" onclick="split('.')">><br />.</div>&nbsp;
-	    <div class="key" onclick="split('/')">?<br />/</div>&nbsp;
-	    <div id="shfr" class="key" onclick="myFunction(this.innerHTML)" style="width:134px;">Shift</div>
-	  </div>
-	  <div style="clear:both">
-	    <div class="key" style="width:75px;">Ctrl</div>
-	    <div class="key">Fn</div>
-	    <div class="key"></div>
-	    <div class="key">Alt</div>
-	   	<div class="key" onclick="myFunction(this.innerHTML)" style="width:362px;">Space</div>
-			<div class="key">Alt</div>
-			<div class="key"></div>
-			<div class="key" style="width:75px;">Ctrl</div>
-			<div class="key" onclick="document.getElementById('display').innerHTML=''" style="width:100px;">CLEAR</div>
-		</div>
-	</div></td></tr></table>
+<body>
+	<table class="table" align="center">
+		<tr>
+			<td>
+				<div><br>
+					<textarea id="display" placeholder="จอแสดงผล" readonly></textarea>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="keyboard">
+	  			<div style="clear:both">
+				    <div class="key" onclick="split('`')">~<br />`</div>
+						<div class="key" onclick="split('1')">!<br />1</div>
+				    <div class="key" onclick="split('2')">@<br />2</div>
+				    <div class="key" onclick="split('3')">#<br />3</div>
+				    <div class="key" onclick="split('4')">$<br />4</div>
+				    <div class="key" onclick="split('5')">%<br />5</div>
+				    <div class="key" onclick="split('6')">^<br />6</div>
+				    <div class="key" onclick="split('7')">&amp;<br />7</div>
+				    <div class="key" onclick="split('8')">*<br />8</div>
+				    <div class="key" onclick="split('9')">(<br />9</div>
+				    <div class="key" onclick="split('0')">)<br />0</div>
+				    <div class="key" onclick="split('-')">_<br />-</div>
+				    <div class="key" onclick="split('=')">+<br />=</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)" style="width:100px;">Backspace</div>
+				  </div>
+				  <div style="clear:both">
+				    <div class="key" onclick="myFunction(this.innerHTML)" style="width:75px;">Tab</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">Q</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">W</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">E</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">R</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">T</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">Y</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">U</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">I</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">O</div>
+				    <div class="key" onclick="myFunction(this.innerHTML)">P</div>
+				    <div class="key" onclick="split('[')">{<br />[</div>
+				    <div class="key" onclick="split(']')">}<br />]</div>
+				    <div class="key" onclick="split('\\')" style="width:75px;">|<br />\</div>
+				  </div>
+				  <div style="clear:both">
+			    	<div id="caps" class="key" onclick="myFunction(this.innerHTML)" style="width:92px;">Caps Lock</div>
+						<div class="key" onclick="myFunction(this.innerHTML)">A</div>
+					 	<div class="key" onclick="myFunction(this.innerHTML)">S</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">D</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">F</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">G</div>
+						<div class="key" onclick="myFunction(this.innerHTML)">H</div>
+						<div class="key" onclick="myFunction(this.innerHTML)">J</div>
+						<div class="key" onclick="myFunction(this.innerHTML)">K</div>
+						<div class="key" onclick="myFunction(this.innerHTML)">L</div>
+						<div class="key" onclick="split(';')">:<br />;</div>
+						<div class="key" onclick='split("&#39;")'>&#34;<br />&#39;</div>
+						<div class="key" onclick="myFunction(this.innerHTML)" style="width:110px;">Enter</div>
+					</div>
+					<div style="clear:both">
+					  <div id="shfl" class="key" onclick="myFunction(this.innerHTML)" style="width:120px;">Shift</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">Z</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">X</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">C</div>
+					 	<div class="key" onclick="myFunction(this.innerHTML)">V</div>
+					  <div class="key" onclick="myFunction(this.innerHTML)">B</div>
+				   	<div class="key" onclick="myFunction(this.innerHTML)">N</div>
+					 	<div class="key" onclick="myFunction(this.innerHTML)">M</div>
+				    <div class="key" onclick="split(',')"><<br />,</div>
+				    <div class="key" onclick="split('.')">><br />.</div>
+				    <div class="key" onclick="split('/')">?<br />/</div>
+				    <div id="shfr" class="key" onclick="myFunction(this.innerHTML)" style="width:134px;">Shift</div>
+				  </div>
+				  <div style="clear:both">
+				    <div class="key" style="width:75px;">Ctrl</div>
+				    <div class="key">Fn</div>
+				    <div class="key"></div>
+				    <div class="key">Alt</div>
+				   	<div class="key" onclick="myFunction(this.innerHTML)" style="width:362px;">Space</div>
+						<div class="key">Alt</div>
+						<div class="key"></div>
+						<div class="key" style="width:75px;">Ctrl</div>
+				</div>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>

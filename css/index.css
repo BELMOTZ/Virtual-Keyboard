@@ -2,6 +2,10 @@
   background-color:none;
   color:inherit;
 }
+::placeholder {
+  text-align:center;
+vertical-align: middle;
+}
 body{
   background: url(../bg.jpg) no-repeat center center fixed;
 	background-size:cover;
@@ -30,13 +34,18 @@ body{
   color: red;
 }
 .key:active {
-  background-color: grey;
+  background-color: darkgrey;
   color: red;
 }
 #display {
-  width: 1000px;
+  width: 770px;
+  height: 290px;
   border:2px solid red;
   color: red;
   background-color: black;
   font-size: 28px;
+  font-family: Lucida Console;
+}
+.table {
+  margin-top: 1%;
 }
